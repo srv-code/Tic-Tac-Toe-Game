@@ -1,4 +1,4 @@
-package game;
+package game.tictactoe;
 
 import java.util.Scanner;
 import java.io.InputStream;
@@ -6,8 +6,9 @@ import java.io.OutputStream;
 import java.io.IOException;
 
 
-/**	Basic Tic Tac Toe game
-*/
+/**	
+ * Basic Tic-Tac-Toe game.
+ */
 public class TicTacToe {
 	private final static float APP_VERSION = 0.01f;
 	public static boolean debugModeEnabled = false; // default value set
@@ -26,7 +27,7 @@ public class TicTacToe {
 	*/
 	private boolean continueInputs;
 
-	/** Shows thr winnnig status of the game.
+	/** Shows the winning status of the game.
 		Can be within any of the below values:
 			0 = None won, if at the end of the game
 					means match has drawn
@@ -178,8 +179,16 @@ public class TicTacToe {
 	private static void checkOptions(final String[] args) {
 		for(String arg : args) {
 			switch(arg) {
-				case "-d": debugModeEnabled = true; break;
-				case "-h": showHelp(); System.exit(0);
+				case "-d": 
+                case "--debug":
+                    debugModeEnabled = true; 
+                    break;
+                    
+				case "-h": 
+                case "--help":
+                    showHelp(); 
+                    System.exit(0);
+                    
 				default: 
 					System.err.println("Invalid option: " + arg + " (ignored)");
 			}
@@ -187,11 +196,11 @@ public class TicTacToe {
 	}
 
 	private static void showHelp() {
-		System.out.println("Tic Tac Toe:");
+		System.out.println("Tic Tac Toe");
 		System.out.println("Description: A simple tic tac toe game.");
 		System.out.printf ("Version: %.2f \n", APP_VERSION);
 		System.out.println("Options:");
-		System.out.println("  -h      Shows this help menu");
-		System.out.println("  -d      Enable debugging mode");
+		System.out.println("  --help,  -h    Shows this help menu");
+		System.out.println("  --debug, -d    Enable debugging mode");
 	}
 }

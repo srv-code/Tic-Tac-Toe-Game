@@ -1,0 +1,2 @@
+alias b='javac -d out src/game/tictactoe/TicTacToe.java'
+alias r='java -cp out game.tictactoe.TicTacToe'
