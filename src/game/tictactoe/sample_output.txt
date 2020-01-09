@@ -1,0 +1,27 @@
+Case: Match draw
+ x | o | x 
+---|---|---
+ o | x | o 
+---|---|---
+ x | o | x 
+
+Case: Team x wins (suggestion 1)
+ * | o | x 
+---|---|---
+ o | * | o 
+---|---|---
+ x | o | * 
+
+Case: Team x wins (suggestion 2) - picked one
+(x)| o | x 
+---|---|---
+ o |(x)| o 
+---|---|---
+ x | o |(x)
+
+Co-ordinate mappings:
+0,0|0,1|0,2
+---|---|---
+1,0|1,1|1,2
+---|---|---
+2,0|2,1|2,2
