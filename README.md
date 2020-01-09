@@ -1,4 +1,4 @@
-# Tic Tac Toe
+# Tic Tac Toe Game
 ## Synopsis
 Plays the classic Tic-Tac-Toe game.
 
